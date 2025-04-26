@@ -1,0 +1,13 @@
+public class Main {
+    public static void main(String[] args) {
+       
+        System.out.println(revertir("hola"));  // se llama a la función revertir 
+    }
+    static String revertir(String palabra) {  // Función recursiva
+        
+        if (palabra.length() <= 1) return palabra;  // Caso base
+        
+        return palabra.charAt(palabra.length() - 1) + revertir(palabra.substring(0, palabra.length() - 1));
+        // se toma el último carácter y lo concatenamos 
+    }
+}
