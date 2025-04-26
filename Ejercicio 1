@@ -1,0 +1,11 @@
+public class Main {
+    public static void main(String[] args) {
+        imprimirDescendente(100);   // descendiente hasta el 0
+    }
+
+    static void imprimirDescendente(int n) { 
+        if (n == 0) return; // caso base con condicion 
+        System.out.println(n);      // se copia el numero de casos
+        imprimirDescendente(n - 1); // llamada recursiva
+    }
+}
