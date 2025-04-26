@@ -1,0 +1,16 @@
+public class Main {
+    public static void main(String[] args) {
+  
+    System.out.println(esPalindromo("reconocer")); // se llama a la funcion esPalindromo
+    }   
+    static boolean esPalindromo(String palabra) { // funcion para verificar si una palabra es un palindromo
+       
+        if (palabra.length() <= 1) return true;  // caso base
+        
+        // Si la primera letra y la última no son iguales, no es un palíndromo
+        if (palabra.charAt(0) != palabra.charAt(palabra.length() - 1)) return false;
+        
+        // Si las letras son iguales, llamamos recursivamente eliminando primera y última letra
+        return esPalindromo(palabra.substring(1, palabra.length() - 1));
+    }
+}
