@@ -1,0 +1,14 @@
+public class Main {
+    public static void main(String[] args) {
+        System.out.println(contarCaracter("programacion", 'o')); // se llama a la función contarCaracter 
+    }
+    static int contarCaracter(String palabra, char c) {    // Función recursiva 
+       
+    if (palabra.isEmpty()) return 0;   // Caso base
+        
+     int suma = (palabra.charAt(0) == c) ? 1 : 0;  // Verificamos si el primer carácter es igual al buscado
+        
+        return suma + contarCaracter(palabra.substring(1), c);
+          // se llama para eliminar el primer carácter de la cadena
+    }
+}
